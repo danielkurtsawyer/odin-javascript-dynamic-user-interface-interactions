@@ -11,6 +11,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
+  "ignorePatterns": ["dist"],
   "rules": {
     "no-console": "off",
     "quotes": ["error", "single"]
