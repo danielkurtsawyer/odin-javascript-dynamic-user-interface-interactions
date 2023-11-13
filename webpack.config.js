@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
+    index: './src/index.js',
     drop_down_menu: './src/components/drop-down-menu/drop-down-menu.js',
     mobile_menu: './src/components/mobile-menu/mobile-menu.js',
     image_slider: './src/components/image-slider/image-slider.js',
