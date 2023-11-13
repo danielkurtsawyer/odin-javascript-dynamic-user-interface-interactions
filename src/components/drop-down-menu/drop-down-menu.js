@@ -10,6 +10,8 @@ export default (menuName, options, links) => {
 
   dropDownMenu.appendChild(menu);
 
+  const optionsArray = [];
+
   options.forEach((option, index) => {
     const optionDiv = document.createElement('div');
     const link = document.createElement('a');
@@ -19,13 +21,12 @@ export default (menuName, options, links) => {
 
     optionDiv.classList.add('drop-down-menu-option');
     optionDiv.classList.add('invisible');
+    optionsArray.push(optionDiv);
     dropDownMenu.appendChild(optionDiv);
   });
 
   menu.addEventListener('click', () => {
     console.log('clicked');
-    const optionsList = document.querySelectorAll('.drop-down-menu-option');
-    const optionsArray = [...optionsList];
     optionsArray.forEach((option) => option.classList.toggle('invisible'));
   });
 

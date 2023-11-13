@@ -16,5 +16,18 @@ body.appendChild(
   )
 );
 
+body.appendChild(
+  createDropDownMenu(
+    'Another Menu',
+    ['Option1', 'Option2', 'Option3', 'areallylongoptionnamegoeshere'],
+    [
+      'https://www.google.com',
+      'https://www.google.com',
+      'https://www.google.com',
+      'https://www.google.com',
+    ]
+  )
+);
+
 createMobileMenu();
 createImageSlider();
