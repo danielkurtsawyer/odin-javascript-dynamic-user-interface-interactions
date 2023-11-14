@@ -9,7 +9,7 @@
     "start": "webpack serve --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Sawyer <danielkurtsawyer@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
