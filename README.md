@@ -2,7 +2,7 @@
 
 Github repository for the dynamic user interface interactions lesson from the Odin Project's JavaScript course.
 
-This lesson was also involved using tools like ESLint and Prettier to assist in formatting JS code.
+This lesson involved using tools like ESLint and Prettier to assist in formatting JS code.
 
 This lesson targeted three different types of common components:
 
