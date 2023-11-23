@@ -25,6 +25,8 @@
   display: flex;
   align-content: center;
   border-radius: 6px;
+
+  border: 2px solid black;
 }
 
 .image-slider-images {
