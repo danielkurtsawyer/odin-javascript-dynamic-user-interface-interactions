@@ -33,6 +33,18 @@ const updateVisibility = function updateArrowVisbility(
   }
 };
 
+const updateNavDots = function updateNavigationDots(newPictureIndex) {
+  const navDots = document.querySelectorAll('.image-slider-nav-dot');
+  const navDotsArray = [...navDots];
+  navDotsArray.forEach((navDot, index) => {
+    if (index === newPictureIndex) {
+      navDot.classList.add('image-slider-nav-dot-selected');
+    } else if (navDot.classList.contains('image-slider-nav-dot-selected')) {
+      navDot.classList.remove('image-slider-nav-dot-selected');
+    }
+  });
+};
+
 const changeFrame = function changeFrameImage(
   allImagesDiv,
   newPictureIndex,
@@ -51,6 +63,9 @@ const changeFrame = function changeFrameImage(
     // update arrows image-slider-index attribute
     leftArrow.setAttribute('image-slider-index', newPictureIndex - 1);
     rightArrow.setAttribute('image-slider-index', newPictureIndex + 1);
+
+    // update nav dots
+    updateNavDots(newPictureIndex);
 
     // also update visibility class if no other image in range
     setTimeout(
@@ -138,6 +153,10 @@ export default function initializeImageSlider(...pictures) {
     navDot.addEventListener('click', () =>
       changeFrame(allImagesDiv, index, pictures.length)
     );
+
+    if (index === 0) {
+      navDot.classList.add('image-slider-nav-dot-selected');
+    }
     navDotContainer.appendChild(navDot);
   });
 

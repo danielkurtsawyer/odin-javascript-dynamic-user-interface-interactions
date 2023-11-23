@@ -63,3 +63,7 @@
 .image-slider-nav-dot:hover {
   background-color: #00a4d6;
 }
+
+.image-slider-nav-dot-selected {
+  background-color: #00a4d6;
+}
